@@ -1,0 +1,31 @@
+### TO TEST GET RESPONSE OF ALL ENTRIES
+
+GET http://127.0.0.1:8000/api/todos
+
+### GET(ing) SINGLE TODO
+
+GET http://127.0.0.1:8000/api/todos/12
+
+### POSTING a TODO ITEM
+
+POST http://127.0.0.1:8000/api/todos/
+Content-Type: application/json
+
+{
+    "name": "This is a test item to be deleted",
+    "status": 0
+}
+
+### UPDATING A TODO ITEM
+
+POST http://127.0.0.1:8000/api/todos/11?_method=PUT
+Content-Type: application/json
+
+{
+    "name": "Handle missing fields with a validation message, for each missing field. For example, if the title is missing, display an error message.",
+    "status": true
+}
+
+### TO DELETE A SINGLE TO-DO ITEM
+
+DELETE http://127.0.0.1:8000/api/todos/12
